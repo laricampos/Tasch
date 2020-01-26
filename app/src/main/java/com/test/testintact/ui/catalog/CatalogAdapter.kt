@@ -9,7 +9,8 @@ import com.test.testintact.R
 import com.test.testintact.data.model.Product
 import kotlinx.android.synthetic.main.view_catalog_item.view.*
 
-class CatalogAdapter : RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder>() {
+class CatalogAdapter(private val onItemClickListener: (product: Product) -> Unit) :
+    RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder>() {
 
     var catalog: List<Product> = emptyList()
         set(value) {
@@ -26,13 +27,12 @@ class CatalogAdapter : RecyclerView.Adapter<CatalogAdapter.CatalogViewHolder>() 
         holder.bind(catalog[position])
     }
 
-    class CatalogViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+    inner class CatalogViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
 
         fun bind(product: Product) {
-            Glide.with(view.context)
-                .load(product.imageUrl)
-                .into(view.catalog_item_image)
+            Glide.with(view.context).load(product.imageUrl).into(view.catalog_item_image)
             view.catalog_item_title.text = product.name
+            view.setOnClickListener { onItemClickListener(product) }
         }
     }
 }

@@ -25,4 +25,6 @@ class WishListRepository @Inject constructor() {
         _wishList.clear()
         wishList.onNext(_wishList)
     }
+
+    fun isProductIsWishList(product: Product): Boolean = _wishList.contains(product)
 }

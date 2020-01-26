@@ -32,7 +32,7 @@ class WishListItem(context: Context, product: Product) : FrameLayout(context) {
 
     private fun addColourSquare(@ColorInt colour: Int) {
         val view = View(context)
-        val squareSide = context.resources.getDimension(R.dimen.colour_square_width).toInt()
+        val squareSide = context.resources.getDimension(R.dimen.small_colour_square_width).toInt()
         val marginEnd = context.resources.getDimension(R.dimen.tiny_margin).toInt()
         view.layoutParams = LayoutParams(squareSide, squareSide).apply {
             setMargins(0, 0, marginEnd, 0)

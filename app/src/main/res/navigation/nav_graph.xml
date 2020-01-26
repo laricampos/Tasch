@@ -14,6 +14,11 @@
 
     <fragment
         android:id="@+id/productDetailsFragment"
-        android:name="com.test.testintact.ui.productDetails.ProductDetailsFragment" />
+        android:name="com.test.testintact.ui.productDetails.ProductDetailsFragment">
+
+        <argument
+            android:name="product"
+            app:argType="com.test.testintact.data.model.Product" />
+    </fragment>
 
 </navigation>

@@ -4,14 +4,22 @@
     <!--CATALOG-->
     <string name="catalog_title">Product catalog</string>
     <string name="catalog_wish_list_title">Your wish list</string>
-    <string name="catalog_wish_list_total">Total $%.2f</string>
-    <string name="catalog_subtotal">Sub-total $%.2f</string>
+    <string name="catalog_wish_list_total">Total $%.0f</string>
+    <string name="catalog_subtotal">Sub-total $%.0f</string>
     <string name="catalog_subtotal_bold">Sub-total</string>
     <string name="catalog_shipping_text">Free Shipping World Wide</string>
     <string name="catalog_primary_button">Proceed to checkout</string>
-    <string name="catalog_price">$ %.2f</string>
+    <string name="catalog_price">$ %.0f</string>
     <string name="catalog_wish_list_out_of_stock">Out of stock</string>
     <string name="catalog_wish_list_empty_text">Your wish list is empty</string>
-
     <string name="catalog_checkout_dialog_text">Are you sure you want to proceed to checkout?</string>
+
+    <!--PRODUCT DETAILS-->
+    <string name="product_details_colours_title">Colours</string>
+    <string name="product_details_sizes_title">Size</string>
+    <string name="product_details_rate_title">Rate the\nproduct</string>
+    <string name="product_details_size">H: %.0fcm/%.0f\"\nW: %.0fcm/%.0f\"\nD: %.0fcm/%.0f\"</string>
+    <string name="product_details_add_wish_list">Add to wish list</string>
+    <string name="product_details_remove_wish_list">Remove from wish list</string>
+
 </resources>

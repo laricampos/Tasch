@@ -12,6 +12,7 @@ import android.view.ViewGroup
 import androidx.core.view.isVisible
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.test.testintact.R
@@ -31,7 +32,7 @@ class CatalogFragment : DaggerFragment() {
         ViewModelProvider(this, viewModelFactory).get(CatalogViewModel::class.java)
     }
 
-    private val catalogAdapter = CatalogAdapter()
+    private val catalogAdapter = CatalogAdapter(::onProductClick)
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_catalog, container, false)
@@ -48,7 +49,6 @@ class CatalogFragment : DaggerFragment() {
 
         viewModel.catalog.observe(viewLifecycleOwner, Observer<List<Product>> {
             initCatalog(it)
-            initWishList(it)
         })
 
         viewModel.wishList.observe(viewLifecycleOwner, Observer<List<Product>> {
@@ -72,6 +72,10 @@ class CatalogFragment : DaggerFragment() {
             .show()
     }
 
+    private fun onProductClick(product: Product) {
+        findNavController().navigate(CatalogFragmentDirections.actionProductDetailsFragmnet(product))
+    }
+
     private fun initCatalog(catalog: List<Product>) {
         catalogAdapter.catalog = catalog
     }
@@ -91,8 +95,12 @@ class CatalogFragment : DaggerFragment() {
         catalog_subtotal_text.text = spannable
 
         catalog_wish_list_container.removeAllViews()
-        wishList.forEach {
-            catalog_wish_list_container.addView(WishListItem(requireContext(), it))
+        wishList.forEach { product ->
+            val wishListItem = WishListItem(requireContext(), product)
+            catalog_wish_list_container.addView(wishListItem)
+            wishListItem.setOnClickListener {
+                onProductClick(product)
+            }
         }
     }
 }
