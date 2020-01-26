@@ -1,0 +1,91 @@
+[
+  {
+    "imageUrl": "https://i.imgur.com/n1jfWf0.jpg",
+    "description": "The shoes compartment of this sports duffle bag is designed with waterproof lining, stores your dirty sports shoes, sneakers separate from the main compartment.",
+    "colors": [
+      "#FFFF00",
+      "#FA8072",
+      "#800000"
+    ],
+    "size": {
+      "height": 1,
+      "width": 3.3,
+      "depth": 2.2
+    },
+    "price": 23,
+    "quantity": 20,
+    "name": "Carrier",
+    "small_description": "Soft leather"
+  },
+  {
+    "imageUrl": "https://i.imgur.com/ZnxSQ3I.jpg",
+    "description": "This large hobo handbag is made of high quality canvas, lightweight, comfortable and durable.",
+    "colors": [
+      "#58D68D",
+      "#5DADE2"
+    ],
+    "size": {
+      "height": 5,
+      "width": 7,
+      "depth": 4.2
+    },
+    "price": 40,
+    "quantity": 10,
+    "name": "Urbanito",
+    "small_description": "Platinum elite expandable bag"
+  },
+  {
+    "imageUrl": "https://imgur.com/OcoKlU9.jpg",
+    "description": "Large enough to hold your A4 size magazine, ipad, cellphone, umbrella, wallet, bottle, perfume, makeups and other items.",
+    "colors": [
+      "#FAD7A0",
+      "#CD6155",
+      "#76448A",
+      "#1B4F72"
+    ],
+    "size": {
+      "height": 2,
+      "width": 2.3,
+      "depth": 1.2
+    },
+    "price": 10.99,
+    "quantity": 0,
+    "name": "Travol",
+    "small_description": "Retreat Backpack Grey/Tan Synthetic Leather One Size"
+  },
+  {
+    "imageUrl": "https://imgur.com/aFImSPP.jpg",
+    "description": "Gym duffle bag is made of high-quality polyester fabric, shockproof and better tear resistant with high-density nylon lining.",
+    "colors": [
+      "#717D7E",
+      "#935116"
+    ],
+    "size": {
+      "height": 5,
+      "width": 5.3,
+      "depth": 5.5
+    },
+    "price": 11,
+    "quantity": 1,
+    "name": "Herschel",
+    "small_description": "Stacked Jacquard Black Midnight, Size One Size"
+  },
+  {
+    "imageUrl": "https://imgur.com/IIqgm0G.jpg",
+    "description": "The perfect carry-on compliant bag for airline travel. Integrated trolley sleeve slides over rolling luggage handle making airport travel a breeze. Your ideal overnight weekend boarding bag for business or personal travel.",
+    "colors": [
+      "#000000",
+      "#16A085",
+      "#CCD1D1"
+    ],
+    "size": {
+      "height": 7,
+      "width": 10.2,
+      "depth": 2
+    },
+    "price": 50.7,
+    "quantity": 3,
+    "name": "Bakatsu",
+    "small_description": "Durable Polyester Water Repellent Chest"
+  }
+]
