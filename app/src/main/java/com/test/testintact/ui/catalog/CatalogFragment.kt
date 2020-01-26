@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.test.testintact.R
 import com.test.testintact.data.model.Product
 import com.test.testintact.di.ViewModelFactory
+import com.test.testintact.ui.MainActivity
 import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.fragment_catalog.*
 import javax.inject.Inject
@@ -40,6 +41,8 @@ class CatalogFragment : DaggerFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        (requireActivity() as MainActivity).showToolbarAppName()
 
         catalog_all_products_list.apply {
             adapter = catalogAdapter

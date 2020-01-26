@@ -1,9 +1,10 @@
 <resources>
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/green</item>
         <item name="colorPrimaryDark">@color/black</item>
         <item name="colorAccent">@color/blue</item>
+        <item name="homeAsUpIndicator">@drawable/ic_back_arrow</item>
     </style>
 
     <style name="PrimaryButton">

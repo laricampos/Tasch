@@ -15,6 +15,7 @@ import com.bumptech.glide.Glide
 import com.test.testintact.R
 import com.test.testintact.di.ViewModelFactory
 import com.test.testintact.extensions.centimeterToInch
+import com.test.testintact.ui.MainActivity
 import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.fragment_product_details.*
 import javax.inject.Inject
@@ -35,11 +36,13 @@ class ProductDetailsFragment : DaggerFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
         setupWithProduct()
     }
 
     private fun setupWithProduct() {
         args.product.apply {
+            (requireActivity() as MainActivity).setToolbarTitle(name)
             product_details_description.text = description
             product_details_price.text = getString(R.string.catalog_price, price)
             Glide.with(requireContext()).load(imageUrl).into(product_details_image)
