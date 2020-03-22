@@ -1,10 +1,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.test.testintact">
+    package="com.sample.tasch">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".AndroidApplication"
+        android:name="com.sample.tasch.AndroidApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,7 +13,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.sample.tasch.ui.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
